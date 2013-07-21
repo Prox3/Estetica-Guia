@@ -86,7 +86,8 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 
 .recent_comments_section h3{background:url(../GeoTheme/images/bg_comments.png) no-repeat 0 10px; color:#4b99d1 !important; padding-left:28px !important}
 
-.wide_comments{border:none; border-bottom:dotted 1px #c8c8c8; padding:0 0 5px 3px !important}
+.wide_comments {border:none;}
+.wide_comments .wide_comment_text{border:none; border-bottom:dotted 1px #c8c8c8; padding:0 0 12px 3px !important}
 .avatar{border:solid 1px #e6e6e6; border-radius:48px; padding:0 !important}
 
 .w_estetica ul li{border:none !important}
