@@ -1391,6 +1391,7 @@ class latest_place_listing extends WP_Widget {
                  <?php $post_images = bdw_get_images($post->ID,'medium');?>
            		<li class="clearfix <?php if(get_post_meta($post->ID,'is_featured',true)){ echo 'featured';}?> <?php echo FEATURED_IMG_CLASS;?>
 " >
+				<div style="display: table;float: left;height: auto;width: 183px;">
                  <?php if(round(abs(strtotime($post->post_date)-strtotime(date('Y-m-d')))/86400)<$new_days) {?> <span class="<?php echo 'new';?>">new</span> <?php }?> 
                 <?php if(get_post_meta($post->ID,'is_featured',true)) {?>  <a class="featured_link" href="<?php the_permalink(); ?>"><span class="<?php echo 'featured_img';?>">featured</span></a> <?php }?>
             	<?php 
@@ -1409,11 +1410,13 @@ class latest_place_listing extends WP_Widget {
 <a class="post_img" href="<?php the_permalink(); ?>">
              <img src="<?php echo get_post_default_img($post->ID,$post->post_type);?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"  /> </a>
                          <?php }?>
-            		 <h3> 
+                     <span class="rating rating-estabelecimento-melhor-avaliado"><center><?php echo get_post_rating_star($post->ID);?></center></span>
+                     </div>
+                     <div style="display: table;float: right;width: 375px;height: 172px;">
+            		 <h3 style="float: none;display: table;width: inherit;"> 
                          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>       
                           <a href="<?php the_permalink(); ?>#comments" class="pcomments" ><?php comments_number('0', '1', '%'); ?> </a> 
                      </h3> 
-                     <span class="rating rating-estabelecimento-melhor-avaliado"><?php echo get_post_rating_star($post->ID);?></span> 
                      <?php
                      if(get_post_meta($post->ID,'address',true))
 					{
@@ -1432,14 +1435,27 @@ class latest_place_listing extends WP_Widget {
 							$complementos.= $rua[$i] . " - ";
 						}
 					 ?>
-                     <p class="address">
+                     <p class="address" style="float: none;display: table;width: inherit;">
 					 	<?php echo $rua[0];?>
                         <br/>
                         <?php echo $complementos;?>
                      </p>
                      <?php }?>
-                    <p><?php echo excerpt($character_cout); ?> </p>
-                    <span class="readmore" ><a href="<?php the_permalink(); ?>" > <?php _e('read more');?> >></a> </span>
+                    <p class="text-melhores-avaliados" style="float: none;width: inherit;display: table;">
+                    <?php
+					 	echo excerpt($character_cout); 
+					?>
+                     </p>
+                     <script>
+                     $(function(){
+						$(".text-melhores-avaliados").each(function() {
+							var $this = $(this);
+							$this.html($this.html().replace(/&nbsp;/g, ' '));
+						});
+					 })
+                     </script>
+                    <span class="readmore" style="float: none;display: table;width: inherit !important;"><a href="<?php the_permalink(); ?>" > <?php _e('read more');?> >></a> </span>
+                    </div>
             	 </li>
 				<?php } ?>
                 </ul>

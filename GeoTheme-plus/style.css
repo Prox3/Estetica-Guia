@@ -78,7 +78,7 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 .featured_img_class h3 .pcomments{display:none !important}
 .featured_img_class h3 a{font-family: 'Titillium Web', sans-serif !important; font-size:20px !important; color:#333333 !important; font-weight:normal !important}
 
-.featured_img_class p{font-family:'Titillium Web', sans-serif !important; font-size:11px !important; color:#333333 !important; font-weight:400 !important; text-align:justify; line-height:17px}
+.featured_img_class p{font-family:'Titillium Web', sans-serif !important; font-size:11px !important; color:#333333 !important; font-weight:400 !important; text-align:left; line-height:17px}
 .featured_img_class .address{font-family:'Titillium Web', sans-serif !important; font-size:12px !important; color:#666666 !important; font-weight:normal !important; text-align:left}
 
 .readmore{width:66% !important; padding:0 !important}
