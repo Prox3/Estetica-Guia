@@ -7,6 +7,7 @@ Version:        0.1.0
 */
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,700,700italic);
 @import url("../GeoTheme/style.css");
+@import url("style-rodolfo.css");
 
 
 /* Neighborhood  selector to the right */
@@ -70,7 +71,7 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 
 .widget h3{font-family:'Titillium Web', sans-serif !important; font-size:26px !important; color:#c748c3; font-weight:bold !important; background-position:0 11px}
 
-.widget .category_list_view li.featured{background:url(../GeoTheme/images/bg_best.png) no-repeat !important; border:1px solid #f6e9f6 !important; border-radius:7px; height:172px}
+.widget .category_list_view li.featured{background:url(../GeoTheme/images/bg_best.png) no-repeat !important; border:1px solid #f6e9f6 !important; border-radius:7px; height:auto;}
 
 #content .category_list_view li .featured_img{background:none !important; display:none}
 
@@ -122,5 +123,5 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 
 #neighborhood-selector-form label{display:none}
 
-/*#content .category_list_view .featured{border:none}
-#content .category_list_view li{padding:30px 10px 10px 10px !important; border:none; border-top:1px dotted #c8c8c8 !important}*/
+.c_list .category_list_view .featured{border:none !important}
+.c_list .category_list_view li{padding:30px 10px 10px 10px !important; border:none; border-top:1px dotted #c8c8c8 !important; background:#FFF !important}

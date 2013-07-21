@@ -1,0 +1,12 @@
+#content .category_grid_view li .rating {padding-bottom:0px !important;}
+.rating img{ margin-right:7px !important;  }
+.rating img:last-child{ margin-right:0px !important; }
+.estabelecimento-destaque, .estabelecimento-destaque > h3, .estabelecimento-destaque > h3 > a{ height:42px !important;}
+.estabelecimento-destaque > h3 > a{display:table-cell !important; vertical-align:middle !important;line-height: 20px !important;
+overflow: hidden!important;}
+#content .category_grid_view li p.review{border:0px !important;}
+#content .category_grid_view li p.review .pcomments{padding:0px;background:none !important;}
+#content .category_grid_view li .new {width: 37px !important;height: 16px !important;}
+#content .category_grid_view li .new {margin-top: 10px!important; margin-left: -1px!important;}
+.titulo-estabelecimento-melhor-avaliado{margin-bottom:0px !important; padding-bottom:0px !important;}
+.rating-estabelecimento-melhor-avaliado{position:absolute !important;left: 50px!important;top: 150px !important;}

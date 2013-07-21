@@ -1379,7 +1379,7 @@ class latest_place_listing extends WP_Widget {
 					if($latest_menus)
 					{
 					?>
-					<h3> <?php echo $title; ?> </h3>
+					<h3 class="titulo-estabelecimento-melhor-avaliado"> <?php echo $title; ?> </h3>
           			<ul class="category_list_view">
 					<?php
                     foreach($latest_menus as $post) {
@@ -1408,11 +1408,12 @@ class latest_place_listing extends WP_Widget {
             } else { ?> 
 <a class="post_img" href="<?php the_permalink(); ?>">
              <img src="<?php echo get_post_default_img($post->ID,$post->post_type);?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"  /> </a>
-                         <?php }?> 
+                         <?php }?>
             		 <h3> 
                          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>       
                           <a href="<?php the_permalink(); ?>#comments" class="pcomments" ><?php comments_number('0', '1', '%'); ?> </a> 
                      </h3> 
+                     <span class="rating rating-estabelecimento-melhor-avaliado"><?php echo get_post_rating_star($post->ID);?></span> 
                      <?php
                      if(get_post_meta($post->ID,'address',true))
 					{
@@ -1422,12 +1423,23 @@ class latest_place_listing extends WP_Widget {
 						$from_add = get_post_meta($post->ID,'geo_address',true);
 					}
 					if($from_add){
+						$rua = explode('-', $from_add);
+						$complementos = "";
+						for($i=1; $i < count($rua);$i++){
+							if($i == (count($rua)-1))
+							$complementos.= $rua[$i];
+							else
+							$complementos.= $rua[$i] . " - ";
+						}
 					 ?>
-                     <p class="address"><?php echo $from_add;?></p>
+                     <p class="address">
+					 	<?php echo $rua[0];?>
+                        <br/>
+                        <?php echo $complementos;?>
+                     </p>
                      <?php }?>
-                     <span class="rating"><?php echo get_post_rating_star($post->ID);?></span>
                     <p><?php echo excerpt($character_cout); ?> </p>
-                    <span class="readmore" ><a href="<?php the_permalink(); ?>" > <?php _e('read more');?>  </a> </span>
+                    <span class="readmore" ><a href="<?php the_permalink(); ?>" > <?php _e('read more');?> >></a> </span>
             	 </li>
 				<?php } ?>
                 </ul>
@@ -1945,15 +1957,16 @@ if(get_the_post_thumbnail( $post->ID, 'medium')){?>
 <?php
 } else {?>
  <a class="post_img" href="<?php the_permalink(); ?>"><img src="<?php echo get_post_default_img($post->ID,$post->post_type);?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"  /></a><?php }?> 
+     
+     				 <span class="rating"> <?php echo get_post_rating_star($post->ID);?><?php /*?><img src="<?php bloginfo('template_directory'); ?>/images/rating.png" alt=""  /><?php */?> </span>
             
-            		<div class="widget_main_title"><h3> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php $post_title = the_title('','',false); echo (strlen($post_title) > 44) ? substr($post_title,0,43).'...' : $post_title; ?></a></h3></div> 
-                    <span class="rating"> <?php echo get_post_rating_star($post->ID);?><?php /*?><img src="<?php bloginfo('template_directory'); ?>/images/rating.png" alt=""  /><?php */?> </span>
+            		<div class="widget_main_title estabelecimento-destaque"><h3> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php $post_title = the_title('','',false); echo (strlen($post_title) > 44) ? substr($post_title,0,43).'...' : $post_title; ?></a></h3></div> 
                     
                     <!-- <p><?php //echo excerpt($character_cout); ?> </p> -->
                 
                  <p class="review clearfix">    
-                 <a href="<?php the_permalink(); ?>#comments" class="pcomments" ><?php comments_number('0', '1', '%'); ?> </a>  
-                 <span class="readmore"> <a href="<?php the_permalink(); ?>"><?php _e('read more');?> </a> </span>
+                 <a href="<?php the_permalink(); ?>#comments" class="pcomments"><?php comments_number('0 Avaliação', '1 Avaliação', '% Avaliações'); ?></a>  
+                 <?php /*?><span class="readmore"> <a href="<?php the_permalink(); ?>"><?php _e('read more');?> </a> </span><?php */?>
                  </p>
                      
             	 </li>
