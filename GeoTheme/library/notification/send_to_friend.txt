@@ -1,0 +1,6 @@
+[SUBJECT-STR]You might be interested in.. [SUBJECT-END]
+<p>Dear [#$to_name#],</p>
+<p>your friend send message for <b>[#$post_title#]</b> </p>
+<p><b>Subject : [#$frnd_subject#]</b></p>
+<p>[#$frnd_comments#]</p>
+<p>Thank you, [#$your_name#]</p>

@@ -1,0 +1,4 @@
+Facebook login bugs  - FIXED
+Event sub category crash - FIXED
+
+Added message to state add listings disbaled if disabled - ADDED/FIXED

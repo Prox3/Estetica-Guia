@@ -1,0 +1,7 @@
+*
+* child.txt
+*
+
+DO NOT Delete this file. 
+
+GeoThemes theme will only use replacement templates from this child theme if this file exists.

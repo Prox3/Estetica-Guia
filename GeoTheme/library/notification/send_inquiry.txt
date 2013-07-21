@@ -1,0 +1,5 @@
+[SUBJECT-STR]Inquiry email[SUBJECT-END]
+<p>Dear [#$to_name#],</p>
+<p>Here is an Inquiry for  <b>[#$post_title#]</b> </p>
+<p>[#$frnd_comments#]</p>
+<p>Thank you, [#$your_name#]</p>

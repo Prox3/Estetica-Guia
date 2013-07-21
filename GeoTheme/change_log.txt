@@ -1,0 +1,387 @@
+v3.2.7
+View submitted info link, images can be broken sometimes - FIXED
+Place/Event flexslider double click thumb bug - FIXED
+Map marker bubble too big on mobile - FIXED
+"Your login Information" not translateable - FIXED
+Video embed not showing on view submitted info preview page - FIXED
+Unlimited images in price package not showing upload button on add listing page - FIXED
+Send to friend and send inquiry now shows sender email in message  - CHANGED
+Profile feilds not saving as blank once filled in - FIXED
+Top rated widget only showing first digit of comment count - FIXED
+Added sessions check function ?gt_check_sessions=1 - ADDED
+RSS images breaking description if no image attached - FIXED
+Link business not set after "go back and edit" clicked  - FIXED
+Search returns unexpected results if white space at begining or end of search term - FIXED
+Diagnostics screen added to GT Tools page for spotting common instalation problems -ADDED
+
+
+v3.2.6
+function name plupload_admin_head changed to gt_plupload_admin_head - CHANGED
+coupon codes not working if coupon with ID 0 deleted - FIXED
+cal_event in breadcrum replaced with the date searched - CHANGED
+Draft places/events showing on user profile page, changed to only author can see drafts - FIXED
+home map full screen button overlapping dropdown menu - FIXED
+2checkout flow improved + transactions working  - FIXED
+Added extra security check if user registration is disabled and trying to add listing - FIXED
+Images gallery on details page aspect ratio fixed for tall images - FIXED
+
+v3.2.5
+Place/Event last image wont remove from front end - FIXED
+Near text thrown to next line in child theme with certian widgets - FIXED
+coupon_used custom feild added to show if coupon was used - ADDED
+add listing page div ID "contact_detail_id" used twice - FIXED
+gt_max_upload_size() function added to set max upload size - ADDED
+"Enter Your Location" text now translatable on single map widget - FIXED
+Search date now translatable - FIXED
+Let user new set there own password now also on add place/event page - ADDED
+Strict SQL server rules not inserting comment rating - FIXED
+portrait images in gallery slider on details page now handeled better - FIXED
+post.custom.js can now be replaced in child theme - ADDED
+sort_order added to price packaged - ADDED
+custom.css call removed from headder - REMOVED
+To field removed rom email headers and replaced by wp_main to field - REMOVED
+
+v3.2.4
+Image limit of 0 not being enforced with new uploader - FIXED
+Popup boxes not working on IE9/10 - FIXED
+ajax_queries.php not usable in child theme - FIXED
+wp_ used instead of $wpdb-> in one line in listing_filters.php after testing - FIXED
+added boyd_class names for preview pages - ADDED
+add price page recurring tick box not showing options - FIXED
+Set Near me not working in new FireFox - FIXED
+Comment star rating not manditory for logged in users after some plugins - FIXED
+
+v3.2.3
+Bulk export blank if not visited add city page once first - FIXED
+App subscription days can sometimes display wrong - FIXED
+Main non native template files not being replaced in child theme - FIXED
+Translations updated 	- UPDATED
+
+
+v3.2.2
+Calendar search results showing place listing sidebar - FIXED
+New user registration email sent twice from add listing page - FIXED
+Event tags showing place lisitng sidebar - FIXED
+Twitter widget api depriciated - FIXED
+Extra security check added to claim listing process - ADDED
+Regions with no cities causing problems - FIXED
+User Profile links to transactions/posts/places/events had extra / - FIXED
+Added "$search_near_add" option for making NEAR searches more specific - ADDED
+Added option to have location name in near search by default - ADDED
+WP 3.5 - Jquery UI, breaking uploader in backend due to new jQuery version - FIXED
+Map category tick names not translateable - FIXED
+
+
+
+V3.2.1
+Small image looks streached in gallery if only 1 package image limit but more attached images - FIXED
+Alt and title added to details page gallery (uses image title from backend) - ADDED
+Max-width issue with home banner slider - FIXED
+Listings and latest palces now use sub category pic if available - ADDED
+Map categories hidden on fullscreen map - FIXED
+Latest news widget showing seconds instead of minutes - FIXED
+Author city not displaying on profile - FIXED
+In the neighborhood "so far away" option not working - FIXED
+We recommend slider for sidebar max-width not working - FIXED
+Non user avatar not showing on comments form from provided email - FIXED
+Weird results (WRONG EMAILS) if submit button clicked more than one on add listing page - FIXED
+
+V3.2.0_beta
+Mobile Responsive layout  - ADDED
+Some comment area links wrong in widgets -  FIXED
+Events widgets not sorting by location correctly - FIXED
+Author events sometimes not showing on author page - FIXED
+Category grid view featured image not a link - FIXED
+If user hits back button on payment and the pay again, gets success message - FIXED
+Upgrade and renewal transactions not being logged in transactions - FIXED
+
+V3.1.3
+Dummy images not showing in media library - FIXED
+Added tool to GT Tools page to fix missing attached images - FIXED
+post_sample_csv.csv updated to include event times - UPDATED
+Drill down to neighborhoods broken by validation change, validated another way - FIXED
+iOS app payment page has debug info showing - FIXED
+
+
+V3.1.2
+Location name added to home page title - ADDED
+Image quality improved a little - ADDED
+% discount can some times cause paypal errors with more than two decimals - FIXED
+Slider 10 link error, replaced with slider 9 - FIXED
+Seting related post to published from transaction breakes post permalink - FIXED
+In the neighborhood widget missing closing div if not results - FIXED
+email validation not accepting less than 3 letter domains - FIXED
+Email with password not sending on some servers when signing up and adding lisitng - FIXED
+Password removed from admin BCC for user sign up emails - FIXED
+UberMenu add event page bug - FIXED
+
+V3.1.1
+Search results now show category default image. - FIXED (search.php)
+Place/Event details page, now hides info according to packeage rules even if "hide" selected - FIXED (place_detail.php, event_detail.php)
+Post custom fields tickbox, not ticked by default when adding - FIXED
+All mail() functions changed to wp_mail() so mail can be sent via SMTP - FIXED
+'me' in search area can now be translated in lanaguage.php - ADDED
+Multicity options dropdown not compatable with category %location_name% - FIXED
+Several language fixes and .po file updated - ADDED/FIXED
+Report this? Moderation link added to places and events and backend UI - ADDED
+
+
+V3.1.0
+Details page map failing if CloudFlare JS compression used because if stray decimal point - FIXED (get_markers.php)
+Spelling fix - FIXED (admin_settings.php)
+Keywords now taken from place/event categories and tags - ADDED (header.php)
+Search button now transaltable in language.php - FIXED (language.php)
+Added comments function to pages - ADDED (page.php, page_rightsidebar.php, page-full.php)
+Category images being deleted from media libary even if used by another category - FIXED (Tax-meta-class.php)
+Default category iamge not working for sub cats - FIXED (functions.php)
+Added two more options to the image croping settings -  ADDED (widgets_functions.php,admin_options.php,custom_functions.php)
+Added the breadcrum text to the be able to be changed in .po file - FIXED (breadcrumb_navxt_class.php)
+City/country region etc slug name now mandatory - ADDED
+July 1st missing on calendar id start of week set to monday - FIXED (calendar.php)
+
+V3.0.9
+Pages appearing multiple times on one page - FIXED
+
+V3.0.8_rc1
+Editing profile page changes user dashboard link - FIXED
+Preview content not formatted properly - FIXED
+Performance issues on 2000+ listings, - FIXED
+Added option to disable ajax comment editing - ADDED
+Paypal PHP warnings if user not registered - FIXED
+Add listings pages, select city moved above address and now changes the map location - ADDED
+HOOK action added below star rsting <?php do_action('below_star_rating', $post->ID); ?> - ADDED
+Meta description beig looped in some places/event - FIXED
+map.js added error reporting if ajax call fails - ADDED
+Copyright text feild changed to textarea in admin settings - FIXED
+Wrappers added to lisitngs pages - ADDED
+
+
+V3.0.7_rc1
+Sidebar miss aligned on catefory page if no paging present - FIXED
+
+V3.0.6_rc1
+Added events comments to recent reviews widgets  -  ADDED
+Top rated widget not everywhere compatable - FIXED
+Default category image not appearing on search results - FIXED
+Changed Wide Recent reviews widget to only be visable once loaded to avoid pushing other contne down the page - FIXED
+b_search.png shadow removed - FIXED
+Home Baner widget slight offset problem on child theme - FIXED
+User City profile field causing 404 error - FIXED
+random sort of categor by default over rides other selection - FIXED
+Upadate profile password, stoped password from reapearing after update - FIXED
+Comment form login link changed to GeoTheme login page - FIXED
+Logout link for comments changed to GeoTheme logout link - FIXED
+CSS fixes for Logo banner - FIXED
+Preview map some times not loading - FIXED
+Added tool to delete an re-add price table - ADDED
+Added ability to add rating to comment from backend even if no previous rating - ADDED
+Fixed EVERYWHERE city not centering or zomming correct on add listing page - FIXED
+Removing the "place & event" breadcrum not removing from category listing page - FIXED
+Places not being removed as featured if downgraded - FIXED
+View submitted info link broken on upgrade to free listing - FIXED
+In the neighbourhood widget thumbs broken if featured image used for listigns - FIXED
+Removed page navi and added "More Random" link for random sort order on listing page - ADDED
+Zoom on details page can now be set from backend - ADDED
+
+
+
+V3.0.5_rc1
+Activation bug not creating location tables - FIXED
+
+V3.0.4_rc1
+Near image not appearing WHEN USING blank child theme - FIXED
+Sidebar sticky map overlapping if 0-1 results - FIXED
+Convert icon function added to depreciated icon page to new convert icons to new setup - ADDED 
+Added sort order to "Latest places" widgets - ADDED
+Auto install of category icons ID changed(was causing icons to be removed) - FIXED
+Bulk Import/Export of Cities, Countries, Regions and Neighborhoods - ADDED
+Added ability to hide Lat/Lng on submit listing page, per price package - ADDED
+Regions can not be deleted error - FIXED
+Added star rating to comments backend view - ADDED
+Rating can be changed from backend in edit comment(at bottom of page) - ADDED
+Ratings now deleted from rating table when parent comment is deleted - FIXED
+Map type not reflecting choice of place/event and allwasy standard type  - FIXED
+Multicity images not working in widgets on front page in some ocastions  - FIXED
+Added spce between review number and wore dreviews on listing pages - FIXED 
+Author page, fixed the EDIT/RENEW button for new expiry system - FIXED
+WPMU city name not appearing in backend place/event listings - FIXED
+WPMU price database not being populated with dummy data - FIXED
+Fixed tick box filtering and added support for dropdown select options for tick box filtering - ADDEX/FIXED
+
+
+
+V3.0.3_rc1
+Send to friend and asend enquiry text not showing - FIXED
+listing sort not sorting if default was rating or reviews - FIXED
+Changed the way the new user registration appears on submit event/place - FIXED
+Changed the expiry check to not expire blank dates - FIXED
+Paypal IPN not adding author TO transactions everytime - FIXED
+Added option to have location specific category links - ADDED
+%location_name% can now be used in category descrption/meta description to repace current location name  - ADDED
+Admin BCC being send to user - FIXED
+Paypal recurring paments not being registered in transactions - FIXED
+Client email variable mising $ - FIXED
+Added link from event page to linked place - ADDED
+IE8 add listing bug, sidebar dropping down - FIXED
+
+
+
+V3.0.2_beta
+stripslashes added to category description to fix escaped charicters - ADDED
+space removed from db_checks.php which was causing captcha no to appear - FIXED
+
+V3.0.1_beta
+Some style issue changes - FIXED
+Added "Add Listing Top Section" widget are - ADDED
+Corect price package not showing on review after save and then edit - FIXED
+Changed spelling of Countrys to Countries in Location select - FIXED
+Added "Rating" and "Reviews" as default sort options for categories - ADDED
+Fixed featured images not appearing in category listing if in WPMU setup - FIXED
+Ubermenu compatablity with one extra style needed (#categories_strip {height:42px;} - ADDED (not tested)
+fixed search missalignment if breadcrums disabled - FIXED
+Added scroll to top if location select is clicked - ADDED
+Added a message to the login/register screen for people trying to claim a listing - ADDED
+Google map top section now works with tags pages - FIXED
+Added "GT Tools" section where tools and diagnostic functions will be added - ADDED
+
+
+##########################################################################
+##########################################################################
+###########     Change log for Geoplaces v3.0.0_beta     #################
+###########     Fixed by Stiofan - www.GeoTheme.com    ###################
+########### 	ASSUME EVERYTHING HAS CHANGED	       ###################
+##########################################################################
+##########################################################################
+V3.0.0_beta
+IE 8 popup forms not working - FIXED
+IE 9 jumpy slider -FIXED
+Linked event longer than 1 day showing as past - FIXED
+Link event in admin backend - FIXED
+Added "PT-> Social Like" widget to add social share buttons to pages/posts/ listings -ADDED
+Category list drpdown not linking properly - FIXED
+AJAX edit comments settings page fails on some servers - FIXED
+All maps fullscreen toggle added - ADDED
+All maps loading div added and improved - ADDED
+Ajax Map marker popups improved - ADDED
+Sidebar listing maps "Sticky" option - ADDED
+Sidebar autozoom to fit option - ADDED
+TOP Section map on listings "pinpoint" feature - ADDED
+Locaton Country options - ADDED
+Locaton State/region options - ADDED
+Locaton Neighbourhood options - ADDED
+Country/State/City/neighbourhood add area map added to get GPS and Zoom level - ADDED
+"Location Select" widget added to select location area - ADDED
+"My Nearest City" option added to location select dropdown - ADDED
+Option to show/hide Google Analytics per price package - ADDED
+Add place/event new user form moved to to of page - ADDED
+Added BCC options to "Registration","Send to friend" and "send enquiry" notifications - ADDED
+Custom fields not being copied on add event "fill in business details" - FIXED
+You can now set the address on a map from the backend - ADDED
+Attachment images not showing in media libary, - FIXED FOR NEW ATTACHMENTS
+Place/Event "view submited info" preview page not showing map correct or custom meta or custom fields - FIXED
+Added option to have events cats on main map - ADDED
+Added option to use default map categories fall all locations - ADDED
+Added option to be able to select what categories are ticked in the main map - ADDED
+WordPress native menu support added - ADDED
+Mega Menu support Added - ADDED
+Search has been changed to allow for greater flexability - ADDED
+Uuser can search nearest to there location - ADDED
+Added "Advanced sort/filter options" to post custom fields - ADDED
+Google generated business icons removed from maps - ADDED
+User can now manage category map icon from edit category page - ADDED
+User can now manage the default image(no image available) per category from edit category page - ADDED
+All image sizes can now be set from library\functions\theme_variables.php - ADDED
+Added User profiles, with ability to enable/disable fields - ADDED
+Added ability to remove the "place" and "event" breadcrum. See wp-admin/admin.php?page=theme_settings Breadcrumbs Navigation - ADDED
+Price package ID added to the manage price screen - ADDED
+Added option to enable video code per price package - ADDED
+Better date and time pickers for events - ADDED
+PayPal subscription payments added - ADDED
+Invoices section added to track sales and subscriptions - ADDED
+Paypal subscriptions integrated with the IPN system to set correct expiry date if subscription canceled -ADDED
+Added post/event count to user list, so you can view all the posts/places/events by the selected author - ADDED
+Users can now sign on with either username or email address - ADDED
+Usernames with commas breaking author page - FIXED
+You can search invoices by any paypal info - ADDED
+Place/Event expiration settings changed, now you can set the expeiration date in any place/event - ADDED
+added the ability to publish the respective place/event while marking a invoice paid - ADDED
+Added city ID and package ID to events backend - ADDED
+Transaction list added to bottom of all places/events - ADDED
+added Expires colum to place/event backend to show expiry date and amount of days - ADDED
+Site now showing title for custom homepage template - FIXED
+Added the ability to remove the "rating" and "reviews" sort option per category - ADDED
+Place/Event "website" links now opwn in new window - ADDED
+Post custom fields now has link option - ADDED
+BCC email changed to wordpress site email - CHANGED
+Added option to allow user to choose own password at signup, setting in design settings - ADDED
+Added option to disable auto login on sign up, settigs in design settings - ADDED
+Added ability fo filter RSS feeds eg: http://website.com/feed/?post_type=place , can filter place,event,post - ADDED
+Added the ability to change the default sort order of place categories, per category - ADDED
+Added the ability to add sort options "random","newest" and "A-Z" per category - ADDED
+Added ability to change the main sort options to a dropdown - ADDED
+Search form now submits on "enter key" - ADDED
+Added option to set the amount of days a lisitng is new and show a "new" icon - ADDED
+Added documentation links to some pages, this can be disbaled under general settings - ADDED
+
+
+V2.5.4
+Added option to home banner and sidebar banner to open links in new window - ADDED
+Go Back and edit not selecting the correct price package - FIXED
+Send to friend and Send Inquiry not working on IE9 - FIXED
+Event custom fields not saving - FIXED
+Event gallery on preview page not working - FIXED
+Post listing as new user, new post notification not being recived by user - FIXED
+Big gap below gallery if only one image on place/events - FIXED
+Added widget area "Logo Section" where you can replace the logo - ADDED
+Single map widget not accepting zoom level - FIXED
+Added star rating to big maps baloon - ADDED
+Added Logo Banner for new Logo Section widget area - ADDED
+Added random option for slider banners - ADDED
+
+
+V2.5.3
+Blog posts not appearing in all citys if city id=0 - FIXED
+IE comment slider CSS fix - FIXED
+Pagination in categories not working if WP table prefix changed from wp_ - FIXED
+Preview page, if number of alive days = 0 text now shows 'Unlimited' - FIXED
+Event calendar not showing all city events - FIXED
+Image upload, can't delete image on go-backa nd edit - FIXED
+Galeria errors  height/width - FIXED
+Categories being added when price package excludes categories - FIXED
+Category listings now pull category description as meta description - ADDED
+Events not ordered by next event - FIXED
+Claim Business toggle explination would not re-hide - FIXED
+Cliam Listing fails if post title has apostrophe in it - FIXED
+
+
+
+V2.5.2
+Price Package bug where timing took the same show/hide value of contact - FIXED
+en_US.po Updated and several files updated to allow full translation od front an backend of GeoTheme - ADDED
+Custom fields "show on all" not working bug - FIXED
+User role warning moved down to avoid admin bar - FIXED
+Pinpoint feature now auto scrolls to map when clicked - ADDED
+You can now add widget functions to /library/functions/child_widget_functions.php in child theme to avoid replacing whole file - ADDED
+Category with no listings shows sidebar map with all markers - FIXED
+Add Listing page, Category select option using ID - FIXED
+Custom fiels not showing on preview page - FIXED
+Map not showing on preview page - FIXED
+Listing posted successfully [#site_name_url#] shortcode not displaying - FIXED
+"preview" translation preventing deleteion of posts - FIXED
+
+##########################################################################
+##########################################################################
+###########     Change log for Geoplaces v2.0_beta     ###################
+###########     Fixed by Stiofan - www.GeoTheme.com    ###################
+########### 	ASSUME EVERYTHING HAS CHANGED		 #################
+##########################################################################
+##########################################################################
+V2.5_beta
+
+// Anti-Spam Hardening
+library/functions/custom_functions.php
+submit_event.php	
+submit_place.php		
+
+// Hide the Google Analytics password in the backend
+library/includes/admin_settings.php

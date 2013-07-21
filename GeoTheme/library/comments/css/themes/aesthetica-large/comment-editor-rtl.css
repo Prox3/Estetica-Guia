@@ -1,0 +1,184 @@
+/* if (!(styles conveniently stolen from sources named or WordPress)) { 
+		styles created by Ronald Huereca;
+ 	 }
+Edit below at your own risk of cataclysmic failure */
+* {
+margin:0;
+padding:0;
+font-weight: normal;
+font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Tahoma,sans-serif;
+}
+img { border: 0; }
+/* Comment Header */
+#comment-edit-header {
+	background-color: #464646;
+	height: 46px;
+	text-align: center;
+}
+#gravatar {
+	float: right;
+	width: 50px;
+	height: 40px;
+	margin: 2px 5px;
+	display: none;
+}
+#title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding-top: 10px;
+}
+#title a, #title a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+#title a:hover { 
+	text-decoration: underline;
+}
+#close {
+	width: 40px;
+	height: 40px;
+	margin: 4px 5px;
+	float: left;
+}
+#close img {
+	margin-top: 11px;
+}
+/* Toggle Box Stuff - Conveniently lifted from WP Admin StyleSheet */
+#comment-options {
+	border-color:#EBEBEB rgb(204, 204, 204) rgb(204, 204, 204) rgb(235, 235, 235);
+	direction: rtl;
+}
+#comment-options {
+	margin: 10px 20px 10px 8px;
+	padding:2px;
+}
+#comment-options h3 {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 9px;
+	cursor: pointer;
+	background-color: #EAF3FA;
+}
+.closed .inside { 
+	display: none;
+}
+.closed .togbox {
+	background-color:#2583AD;
+	background-image:url(images/toggle-arrow.gif);
+}
+.closed .togbox {
+	background-position:4px 15px;
+}
+.togbox {
+	background-color:#B2B2B2;
+	background-image:url(images/toggle-arrow.gif);
+}
+.togbox {
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topright:3px;
+	background-position:-10px 16px;
+	background-repeat:no-repeat;
+	display:block;
+	height:37px;
+	margin-right:-21px;
+	margin-top:-10px;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-9999px;
+	width:12px;
+}
+#tabs-2 {
+	text-align: right;
+}
+.ui-tabs { text-align: right;
+}
+/* Forms */
+div .form {
+	clear: both;
+	float:right;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+table.inputs {
+	border: 0;
+	text-align: left;
+}	
+table.inputs td {
+	padding: 5px 0;
+}
+.inputs {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.inputs label{
+	text-align: left;
+	margin-left: 10px;
+}
+textarea, input { border: 1px solid #CCC; direction:rtl; font-size: 12px;}
+textarea { width: 90%; float: right;}
+#buttons div {
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/*Status */
+#status, #close-option { 
+	display: none;
+}
+#status {
+direction:rtl;
+	clear: both;
+	margin: 0 10px;
+	padding: 5px;
+}
+#status.error, #status.success {
+	display: block;
+}
+#status.error {
+	background-color: #FFEBE8;
+	border: 1px solid #CC0000;
+}
+#status a, #status a:hover {
+	color:#0000FF;
+}
+#status.success {
+	background-color: #FFFFE0;
+	border: 1px solid #E6DB55;
+}
+#post_title_radio, #post_id_radio {
+	clear: both;
+}
+#post_title_loading, #post_loading, #post_id_loading {
+	float: right;
+	clear: both;
+}
+a.next {
+	display: block;
+	font-size: 16px;
+	padding: 4px 0px;
+	padding-left: 30px;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+	background:url(images/next.png) left center no-repeat;
+}
+a.previous {
+	display: block;
+	font-size: 16px;
+	padding: 4px 0px;
+	padding-right: 30px;
+	float: right;
+	margin-left: 10px;
+	text-decoration: none;
+	background:url(images/back.png) right center no-repeat;
+}
+a.hidden, div.hidden {
+	display: none;
+}
+.loading { 
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: url(images/loading.gif);
+}

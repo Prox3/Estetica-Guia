@@ -1,0 +1,126 @@
+/*
+Theme Name:     GeoTheme To The Max
+Description:    Child theme for the GeoTheme theme, "maximized" by Maximum Results Marketing.
+Author:         Eric Peterka, Maximum Results Marketing, Inc.
+Template:       GeoTheme
+Version:        0.1.0
+*/
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,700,700italic);
+@import url("../GeoTheme/style.css");
+
+
+/* Neighborhood  selector to the right */
+#content .city-neighborhood-selector {
+	text-align:right;
+	width:570px;
+	margin:0; 
+	padding:0 0 0 20px; 
+	height:35px; 
+	margin-bottom:50px; 
+}
+
+/* Hide the sort by drop down */
+.sort_by_dd {
+	display:none;
+}
+
+#header{padding: 0px 0 16px 0 !important}
+#header_outer {background:url(../GeoTheme/images/bg_header.jpg) no-repeat 50% 0 !important}
+.logo img{margin:22px 0 0 -1px !important}
+
+.welcome span, .welcome span strong, .welcome a, .userin a{font-family: 'Titillium Web', sans-serif; font-size:12px; color:#666666 !important}
+.welcome span{font-weight:400}
+
+.searchform span .s {font: 'Titillium Web', sans-serif; font-size:13px; color:#666666 !important; font-weight:400 !important}
+
+.search_btn{font:bold 12px 'Titillium Web', sans-serif; color:#5a5a5a !important; background: url(../GeoTheme/images/b_search.png) no-repeat left top !important;}
+.search_btn:hover{background: url(../GeoTheme/images/b_search.png) no-repeat left bottom !important;}
+
+span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !important}
+
+.header_right span.searchfor small, .header_right span.near small{padding-top:0 !important; margin:-4px 0 0 -16px !important; font:13px 'Titillium Web', sans-serif; color:#FFF !important; text-shadow:1px 1px 1px #555}
+
+#categories_strip{background:url(../GeoTheme/images/category_stripbg.png) repeat-x !important; height:37px !important}
+
+#shadow_navigator{background:url(../GeoTheme/images/category_stripbg.png) repeat-x !important; width:100%; height:37px; position:absolute; left:0; z-index:-9000; top:155px}
+
+#categories_strip #main_nav_menu ul li a{color:#FFF !important; background:url(../GeoTheme/images/cat_nav_n.png) no-repeat right top !important; text-shadow: 1px 1px 1px #7b7b7b !important; height:29px !important; padding:8px 15px 0px 15px !important}
+#categories_strip #main_nav_menu ul{font-weight:500 !important}
+
+.lb_region{font:11px 'Titillium Web', sans-serif; color:#FFF; text-shadow: 1px 1px 1px #7b7b7b !important; height:29px !important; padding:9px 0px 0px 15px !important; font-weight:300 !important; float:left}
+
+#location_select_widget{background:url(../GeoTheme/images/location_dd2.png) no-repeat !important; width:122px !important; height:30px !important; margin-top:3px; color:#5b5858; font-size:12px; border:none !important; font-family: 'Titillium Web', sans-serif;}
+#location_select_widget span{line-height:28px !important; padding-left:13px !important; font-weight:600}
+
+.top_banner_section_in{padding:10px 10px 15px 10px !important; border:1px solid #dbdbdb !important; background:url(../GeoTheme/images/boder-bottom-map.png) no-repeat bottom !important}
+
+#trigger{bottom:5px !important}
+.map_category{bottom:7px !important;}
+
+.top_banner_section {background:none !important;}
+
+.widget h3 span a, .widget h3 span{font-family: 'Titillium Web', sans-serif !important; font-size:26px; color:#30babc; font-weight:bold}
+
+#content .category_grid_view li a.post_img {box-shadow:none !important; -moz-box-shadow:none !important; -webkit-box-shadow:none !important; border: 1px solid #e2dfdf;background:#fff; border-radius:3px}
+
+#sidebar h3, #content .widget h3{border-bottom:none !important}
+#sidebar .widget ul li{border-bottom:1px dotted #ddd; background:none !important; padding:2px 0 5px 0 !important}
+#sidebar .widget ul li a{font-family:'Titillium Web', sans-serif !important; font-size:14px; color:#666666; text-decoration:none}
+#sidebar .widget ul li a:hover{text-decoration:underline; color:#666666 !important}
+
+.widget h3{font-family:'Titillium Web', sans-serif !important; font-size:26px !important; color:#c748c3; font-weight:bold !important; background-position:0 11px}
+
+.widget .category_list_view li.featured{background:url(../GeoTheme/images/bg_best.png) no-repeat !important; border:1px solid #f6e9f6 !important; border-radius:7px; height:172px}
+
+#content .category_list_view li .featured_img{background:none !important; display:none}
+
+.featured_img_class h3 .pcomments{display:none !important}
+.featured_img_class h3 a{font-family: 'Titillium Web', sans-serif !important; font-size:20px !important; color:#333333 !important; font-weight:normal !important}
+
+.featured_img_class p{font-family:'Titillium Web', sans-serif !important; font-size:11px !important; color:#333333 !important; font-weight:400 !important; text-align:justify; line-height:17px}
+.featured_img_class .address{font-family:'Titillium Web', sans-serif !important; font-size:12px !important; color:#666666 !important; font-weight:normal !important; text-align:left}
+
+.readmore{width:66% !important; padding:0 !important}
+.readmore a{font-family:'Titillium Web', sans-serif !important; color:#c648c2 !important; font-size:11px !important; background:none !important; float:right !important}
+
+.recent_comments_section h3{background:url(../GeoTheme/images/bg_comments.png) no-repeat 0 10px; color:#4b99d1 !important; padding-left:28px !important}
+
+.wide_comments{border:none; border-bottom:dotted 1px #c8c8c8; padding:0 0 5px 3px !important}
+.avatar{border:solid 1px #e6e6e6; border-radius:48px; padding:0 !important}
+
+.w_estetica ul li{border:none !important}
+.w_estetica ul li .post_img_tiny{width:52px; height:42px; border:solid 1px #e6e6e6; padding:1px; border-radius:4px; margin-right:11px}
+.w_estetica ul li img{width:52px; height:42px;}
+.w_estetica ul li .date{font-family:'Titillium Web', sans-serif !important; font-size:11px; color:#afaeae; margin-top:3px; float:left}
+.w_estetica ul li hr{border-top: 1px dotted #c8c8c8;}
+
+#bottom{background:url(../GeoTheme/images/bg_footer.jpg) no-repeat 50% 0 !important; padding:0 !important; height:271px}
+#bottom_in{height:271px}
+
+.first_col .widget h3 span, .second_col .widget h3, .third_col .widget h3 span{color:#FFF; font-weight:500 !important; font-size:20px !important}
+.first_col .widget .textwidget{width:180px}
+.textwidget p, .subscribe p{color:#FFF !important; font-family:'Titillium Web', sans-serif !important; font-size:12px; font-weight:100; line-height:21px !important; text-align:justify}
+.second_col .widget li{background:none !important; padding:0 !important}
+.second_col .widget li a{color:#FFF !important; font-family:'Titillium Web', sans-serif !important;}
+.second_col .widget li span{font-family:'Titillium Web', sans-serif !important; font-size:10px !important; color:#FFF !important}
+.second_col .widget{width:180px}
+
+.third_col .widget h3{margin-top:1px}
+.second_col .widget h3, .first_col .widget h3{margin-top:2px}
+
+.tagcloud a{color:#FFF !important}
+.tagcloud{line-height:23px}
+
+.subscribe h3{font-family:'Titillium Web', sans-serif !important; color:#FFF; font-weight:500 !important; font-size:20px !important; margin-top:1px; margin-bottom:16px !important}
+.subscribe h3 a{display:none}
+
+#footer{padding-top:10px !important; background:none !important; }
+#footer p{font-family:'Titillium Web', sans-serif !important; color:#FFF; font-weight:400 !important; font-size:11px !important;}
+
+#inner_pages h1{font-family:'Titillium Web', sans-serif !important; color:#2ea8a8 !important; font-size:34px; height:18px}
+#inner_pages .breadcrumb{display:none}
+
+#neighborhood-selector-form label{display:none}
+
+/*#content .category_list_view .featured{border:none}
+#content .category_list_view li{padding:30px 10px 10px 10px !important; border:none; border-top:1px dotted #c8c8c8 !important}*/
