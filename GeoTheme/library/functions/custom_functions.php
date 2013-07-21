@@ -1222,20 +1222,18 @@ function wide_recent_comments($g_size = 30, $no_comments = 10, $comment_lenth, $
 					  }
 					  echo "\" alt=\"\" class=\"avatar\" />";
 				   }
-	$post_rating = $wpdb->get_var("select rating_rating from $rating_table_name where comment_id=\"$comment_id\"");
-	echo '<br />'.draw_rating_star($post_rating);
     echo "</span>\n";
     echo '' ;
 
            echo '<div class="wide_comment_text"  >' ;
- 			 echo  '<a href="'.$user_profile_url.'">'.$comment_author.'</a> '.__('On').' <a href="'.$permalink.'">'.$post_title.'</a><br />';
+ 			 echo  '<a href="'.$user_profile_url.'">'.$comment_author.'</a> '.__('avaliou').' <a href="'.$permalink.'">'.$post_title.'</a><br />';
 			 
-			 
+			$post_rating = $wpdb->get_var("select rating_rating from $rating_table_name where comment_id=\"$comment_id\"");
+			echo '<p class="rating rating-recent-comments">'.draw_rating_star($post_rating)."</p>";
  			echo "<a class=\"comment_excerpt\" href=\"" . $permalink . "\" title=\"View the entire comment\">";
 			echo $comment_excerpt;
 			echo "</a>";
 			echo "</div>";
-			
 			echo '</li>';
 		}
 

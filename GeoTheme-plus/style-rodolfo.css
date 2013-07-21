@@ -8,5 +8,6 @@ overflow: hidden!important;}
 #content .category_grid_view li p.review .pcomments{padding:0px;background:none !important;}
 #content .category_grid_view li .new {width: 37px !important;height: 16px !important;}
 #content .category_grid_view li .new {margin-top: 10px!important; margin-left: -1px!important;}
-.titulo-estabelecimento-melhor-avaliado{margin-bottom:0px !important; padding-bottom:0px !important;}
+.titulo-estabelecimento-melhor-avaliado, .comentsJcarousellite{margin-bottom:0px !important; padding-bottom:0px !important;}
 .rating-estabelecimento-melhor-avaliado{position:absolute !important;left: 50px!important;top: 150px !important;}
+.rating-recent-comments{padding:0px !important; margin:10px 0px 10px 0px !important;}

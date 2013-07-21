@@ -2422,12 +2422,11 @@ class WideCommentsWidget extends WP_Widget {
 		 ?>						
 <script type="text/javascript"> 
 jQuery(function() {
-					jQuery('ul.wide_recent_comments').css('display', 'block') ;
-
+	jQuery('ul.wide_recent_comments').css('display', 'block') ;
 	jQuery(".newsticker-jcarousellite").jCarouselLite({
 		vertical: true,
 		hoverPause:true,
-		visible: <?php echo $visable; ?>,
+		//visible: <?php echo $visable; ?>,
 		auto:<?php echo $auto; ?>,
 		speed:<?php echo $speed; ?>
 	});
@@ -2435,7 +2434,7 @@ jQuery(function() {
 </script>
         <div class="widget recent_comments_section">
         
-        <h3> <?php echo $title; ?> </h3>
+        <h3 class="comentsJcarousellite"> <?php echo $title; ?> </h3>
            <div class="newsticker-jcarousellite"> 
 
        	<ul class="wide_recent_comments" style="display:none" >
