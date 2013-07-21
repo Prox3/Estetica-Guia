@@ -1,11 +1,14 @@
 <?php if(!$preview){get_header();}?>
 <!--in GeoThemes-2-the-max place-detail.php -->
 <div id="wrapper" class="clearfix">
-         	<div id="inner_pages" class="clearfix" >
+         	<div id="inner_pages" class="clearfix singlePlace" >
             	
                 <h1 class="main_title"><a href="<?php if($preview){echo '#';}else{the_permalink();} ?>" rel="bookmark" title="Permanent Link to <?php if($preview){echo $proprty_name;}else{the_title_attribute();} ?>">
                       <?php if($preview){echo $proprty_name;}else{the_title();} ?>
-                      </a></h1>   
+                      </a></h1>
+                      
+                      <div id="body_info_place"></div>
+                         
                        <div class="likethis">
                      <?php if ( get_option('ptthemes_tweet_button') ) { ?>
                        <a href="http://twitter.com/share" class="twitter-share-button"><?php _e('Tweet');?></a>

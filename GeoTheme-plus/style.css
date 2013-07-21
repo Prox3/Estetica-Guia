@@ -41,7 +41,7 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 
 .header_right span.searchfor small, .header_right span.near small{padding-top:0 !important; margin:-4px 0 0 -16px !important; font:13px 'Titillium Web', sans-serif; color:#FFF !important; text-shadow:1px 1px 1px #555}
 
-#categories_strip{background:url(../GeoTheme/images/category_stripbg.png) repeat-x !important; height:37px !important}
+#categories_strip{background:transparent !important; height:37px !important; margin-bottom:0px !important; display:table;}
 
 #shadow_navigator{background:url(../GeoTheme/images/category_stripbg.png) repeat-x !important; width:100%; height:37px; position:absolute; left:0; z-index:-9000; top:155px}
 
@@ -126,3 +126,35 @@ span.near{background:url(../GeoTheme/images/nearbg.png) no-repeat left top !impo
 
 .c_list .category_list_view .featured{border:none !important}
 .c_list .category_list_view li{padding:30px 10px 10px 10px !important; border:none; border-top:1px dotted #c8c8c8 !important; background:#FFF !important}
+.c_list .category_list_view li a{border-radius:3px}
+.c_list .category_list_view li a img{box-shadow:none !important}
+.c_list .category_list_view li .content h3{float:left !important; width:187px !important; height:auto; line-height:21px !important}
+.c_list .category_list_view li .content h3 a{font-family:'Titillium Web', sans-serif !important; font-size:20px !important; color:#333333 !important}
+.c_list .category_list_view li .content .content_right{width:185px !important; height:26px}
+/*.c_list .category_list_view li .content .content_right .rating,*/ .c_list .category_list_view li .content .content_right .ping{display:none !important}
+.divAddress{margin:4px 0 0 0 !important; width: 149px; height:auto; font-family:'Titillium Web', sans-serif !important; font-size:11px !important; color:#666666 !important; float:left; line-height:14px}
+.c_list .category_list_view li .content .content_right .pcomments{background-color:#f1f1f1 !important; background-image:none !important; border-bottom-left-radius:4px !important; border-top-left-radius:4px !important; border-top-right-radius:0 !important; border-bottom-right-radius:0 !important; border:none !important; font-family:'Titillium Web', sans-serif !important; font-size:10px !important; color:#7b7b7b !important; text-align:center !important; padding:0 !important; padding:5px 0px !important; border-bottom:none !important; width:65px !important; float:left !important}
+
+.addtofav{width:119px !important; height:15px !important; float:left !important; border:none !important; border-bottom-right-radius:4px !important; border-top-right-radius:4px !important; background-color:#f1f1f1 !important; background-image:none !important; padding:5px 0px !important; font-family:'Titillium Web', sans-serif !important; text-align:center !important; font-size:10px !important; color:#7b7b7b !important; border-bottom-left-radius:0 !important; border-top-left-radius:0 !important; border-left:solid 1px #FFF !important}
+
+.descListPlace{width:376px !important; height:auto !important}
+
+.c_list .category_list_view li .content .readmore{display:none !important}
+
+.c_list .category_list_view li .new{margin: 41px 0 0 0 !important; width: 38px !important;}
+
+.singlePlace{margin-top:159px !important}
+#bg_map_single{width:100%; height:160px; background:url(../GeoTheme/images/bg_map_single.png) 50% 0 no-repeat; position:absolute; left:0; z-index:-9000; margin-top:-11px; margin-top:-160px}
+.singlePlace #content .single_post .posts .slider{width:189px; height:129px; float:left}
+.singlePlace #content .single_post .posts .slider #slider{width:189px; height:129px; border:solid 1px #e6e6e6; border-radius:4px}
+.singlePlace #content .single_post .posts .slider #slider .slides{height:129px;}
+.singlePlace #content .single_post .posts .slider #slider .slides li{height:129px; margin:0}
+.singlePlace #content .single_post .posts .slider #slider .slides li img{width:189px; height:129px; margin:0 !important; max-width:189px !important}
+.singlePlace #content{margin:-140px 0 0 0 !important}
+
+.singlePlace .main_title{padding: 2px 0 0 215px !important; width: 388px !important;}
+.singlePlace .main_title a{font-family:'Titillium Web', sans-serif !important; font-size:30px !important; font-weight:500; color:#333333 !important}
+.singlePlace .likethis{display:none}
+
+.singlePlace .single_post .posts .post_bottom{display:none}
+#body_info_place{width:273px; height:60px; float:left; margin-top:26px; padding-left:218px}

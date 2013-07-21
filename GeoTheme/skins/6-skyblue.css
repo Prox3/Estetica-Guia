@@ -217,7 +217,7 @@ h5.form_title { border-bottom:1px solid #ddd; }
 
 /* list view*/
 
-#content .category_list_view li { border-bottom:1px solid #e5e5e5;  }
+#content .category_list_view li { /*border-bottom:1px solid #e5e5e5;*/  }
 
 #content .category_list_view li h3 { border-bottom:none; color:#00a3d3;  }
 #content .category_list_view li h3 a { color:#00a3d3; }
