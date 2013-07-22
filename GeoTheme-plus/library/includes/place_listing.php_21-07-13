@@ -3,8 +3,6 @@ global $wp_query, $post, $wpdb;
 $current_term = $wp_query->get_queried_object();
 $category_link = get_term_link($current_term, 'placecategory');
 ?>
-<link href="<?php bloginfo('url'); ?>/wp-content/themes/GeoTheme-plus/chosen.css" type="text/css" rel="stylesheet" />
-<script src="<?php bloginfo('url'); ?>/wp-content/themes/GeoTheme-plus/chosen.jquery.js" type="text/javascript"></script>
 <?php dynamic_sidebar('Place Listing Top Section'); ?>
 <!--in GeoThemes-2-the-max place-detail.php -->
 <div id="wrapper" class="clearfix">
@@ -70,18 +68,9 @@ if($cat_description){echo str_replace('%location_name%', $_SESSION['location_nam
 	    echo '<input type="hidden" name="'.$mr_request_key.'" value="'.$mr_request_value.'" />'.PHP_EOL;
 	}
 ?>
-		    <input id="neighborhood-selector-submit" type="submit" value="Go!" />
-			<script type="text/javascript">
-				jQuery(function($){$('#neighborhood-selector-submit').hide(); 
-				var txt = $.trim($("#location_select_widget").text());
-				$.map($("#post_hood_id option"),function(i,array)
-				{
-					if($.trim($(i).val()) == txt)
-						$(i).attr('selected','true');
-				});
-				
-				$("#post_hood_id").chosen();})
-            </script>
+		    <input id="neighborhood-selector-submit" type="submit" value="Go!" /><script type="text/javascript">
+
+jQuery(function($){$('#neighborhood-selector-submit').hide(); })</script>
 		        </form>
 		    </span><!-- class="neighborhood-selector" --> 
 		</div><!-- class="city-neighborhood-selector" -->
@@ -192,7 +181,7 @@ $new_days = get_option('ptthemes_new_days');
 ">
             <?php if(round(abs(strtotime($post->post_date)-strtotime(date('Y-m-d')))/86400)<$new_days) {?> <span class="<?php echo 'new';?>">new</span> <?php }?>
             <?php if(get_post_meta($post->ID,'is_featured',true)) {?><a class="featured_link" href="<?php the_permalink(); ?>"> <span class="<?php echo 'featured_img';?>">featured</span></a> <?php }?>
-            <div style="display: table;float: left;height: auto;width: 183px;">
+            
 			<?php 
 if(get_the_post_thumbnail( $post->ID, array())){?>
 <a class="post_img" href="<?php the_permalink(); ?>">
@@ -241,7 +230,7 @@ if(get_the_post_thumbnail( $post->ID, array())){?>
         <?php if(round(abs(strtotime($post->post_date)-strtotime(date('Y-m-d')))/86400)<$new_days) {?> <span class="<?php echo 'new';?>">new</span> <?php }?> 
         <?php if(get_post_meta($post->ID,'is_featured',true)) {?> <span class="<?php echo 'featured_img';?>">featured</span> <?php }?>
 
-        <div style="display: table;float: left;height: auto;width: 183px;">
+        
 		<?php 
             if(get_the_post_thumbnail( $post->ID, array())){?>
              <a class="post_img" href="<?php the_permalink(); ?>">
@@ -257,19 +246,16 @@ if(get_the_post_thumbnail( $post->ID, array())){?>
             <?php
             } else { ?> 
 <a class="post_img" href="<?php the_permalink(); ?>"><img src="<?php echo $default_img;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"  /></a><?php }?> 
-		 <span class="rating" style="margin: 0 auto;display: table;float: none;width: 183px;">
-		 	<center>
-				<?php echo get_post_rating_star($current_post_id);?>
-            </center>
-         </span>
-     		</div>
-            
+     
          <div class="content">
          <h3>  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>  </h3> 
             <div class="content_right">
             <a href="<?php the_permalink(); ?>#comments" class="pcomments" ><?php comments_number('0 '.__('reviews'), '1 '.__('review'), '% '.__('reviews')); ?> </a> 
+            <span class="rating"><?php echo get_post_rating_star($current_post_id);?></span>
            
                         <a href="#sticky_map"  onclick="openMarker('<?php echo $post->ID; ?>')" class="ping" id="pinpoint_<?php echo $post->ID; ?>"><?php _e('Pinpoint');?></a>
+
+            
 			<?php favourite_html($post->post_author,$post->ID); ?>
            
         </div>

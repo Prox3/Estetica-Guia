@@ -310,8 +310,7 @@ jQuery("#location_select_list").load("<?php echo get_bloginfo('url').'?ajax=get_
 				  
 jQuery('#location_select_widget').click( function() {
 jQuery('#location_select_wrapper').slideToggle("200");
-jQuery('body,html').animate({scrollTop: 0}, 800);
-
+//jQuery('body,html').animate({scrollTop: 0}, 800);
 });
 });
   

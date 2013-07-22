@@ -17,19 +17,22 @@
     </script>
 </head>
 <body>
-    <form target='hiddenframe' enctype='multipart/form-data'
-    action='<?php echo ecu_plugin_url() . 'upload.php' ?>'
-    method='POST' name='uploadform' id='uploadform'>
+    <form target='hiddenframe' enctype='multipart/form-data' action='<?php echo ecu_plugin_url() . 'upload.php' ?>' method='POST' name='uploadform' id='uploadform'>
         <?php wp_nonce_field('ecu_upload_form') ?>
-        <label for='file' name='prompt'>
+        <!--<label for='file' name='prompt'>
 	    <?php _e('Select File') ?>:
-	</label>
+	</label>-->
+  			<div id="div-input-file">
         <input type='file' name='file' id='file'
             onchange="document.getElementById('uploadform').style.display
 	        = 'none';
             document.getElementById('loading').style.display = 'block';
             document.uploadform.submit();
             document.uploadform.file.value = ''" />
+         <div id="div-input-falso">
+        	<input name="file_falso" type="text" id="file_falso" class="valida blockTab" style="height:36px"  />
+        </div>
+      </div>
     </form>
 
     <div align='center'>

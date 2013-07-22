@@ -32,6 +32,7 @@ echo get_multihood_dl_options($selected='',$default_option='',$att='', $city_id,
 }
 
 
+
 if($_REQUEST['ajax']=='lat' && $_REQUEST['city_id']){
 $city_id = mysql_real_escape_string ($_REQUEST['city_id']);
 echo get_city_lat($city_id);

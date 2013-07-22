@@ -60,48 +60,7 @@ class get_specials extends WP_Widget {
                     </h3>
           <ul class="category_grid_view clearfix">
                    
-                   <?php $pcount=0;
-					foreach($latest_menus as $post) :
-                    setup_postdata($post);
-					$pcount++;
-			    ?>
-                 <?php $post_images = bdw_get_images($post->ID,'large');?>
-           
-           		<li class="clearfix <?php if(get_post_meta($post->ID,'is_featured',true)){ echo 'featured';}?> <?php echo FEATURED_IMG_CLASS;?>
-"> 
-                 <?php if(get_post_meta($post->ID,'is_featured',true)) {?> <span class="<?php echo 'featured_img';?>">featured</span> <?php }?>
-               	
-               	<?php 
-if(get_the_post_thumbnail( $post->ID, array())){?>
-<a class="post_img" href="<?php the_permalink(); ?>">
-<?php echo get_the_post_thumbnail( $post->ID, array(160,153),array('class'	=> "",));?></a><?php
-}else if($post_images[0]){ global $thumb_url;
-	$thumb_url1 = $thumb_url.get_image_cutting_edge($args);
-?>
- <a class="post_img" href="<?php the_permalink(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo $post_images[0];?>&amp;w=<?php echo TTIMG_MW;?>&amp;h=<?php echo TTIMG_MH;?>&amp;zc=1&amp;q=80<?php echo $thumb_url1;?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"  /></a>
-<?php
-} else {?>
-<a href="<?php the_permalink(); ?>"><span class="noimage"><?php _e('Image Not Available');?></span></a>
-<?php }?> 
-            
-            		<h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
-                    <span class="rating"> <?php echo get_post_rating_star($post->ID);?><?php /*?><img src="<?php bloginfo('template_directory'); ?>/images/rating.png" alt=""  /><?php */?> </span>
-                    
-                    <p><?php echo excerpt($character_cout); ?> </p>
-                
-                 <p class="review clearfix">    
-                 <a href="<?php the_permalink(); ?>#comments" class="pcomments" ><?php comments_number('0', '1', '%'); ?> </a>  
-                 <span class="readmore"> <a href="<?php the_permalink(); ?>"><?php _e('read more');?> </a> </span>
-                 </p>
-                     
-            	 </li>
-                 
-                 <?php if($pcount!=0 && ($pcount%3)==0){?>
-                 <li class="hr"></li>
-                 <?php }?>
-    
-           
-<?php endforeach; ?>
+                   
 </ul>
  <?php }?>
 <?php

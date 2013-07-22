@@ -320,9 +320,6 @@ jQuery("#rmenu").click(function() {
 		$(".c_list .category_list_view li .content .address").next().addClass("divAddress");
 		$(".c_list .category_list_view li .content").find("p:eq(2)").addClass("descListPlace");
 		
-		$("#pg-search .category_list_view li .content .address").next().addClass("divAddress");
-		$("#pg-search .category_list_view li .content").find("p:eq(2)").addClass("descListPlace");
-		
 		var html_address = $(".singlePlace #sidebar .company_info p:eq(2)").next().clone();
 		$("#placeAddress").append(html_address);
 		
@@ -338,12 +335,15 @@ jQuery("#rmenu").click(function() {
 		
 		$("#location_select_wrapper ul").first().find("li").attr("style","border:0px !important");
 		
+		$(".company_info, .company_info2").hide();
+		
 		var html_map = $(".singlePlace #content .single_post_advt #sticky_map .map_background .top_banner_section_in #map_canvas").clone();
 		$("#bg_map_single").append(html_map);
 		$("#bg_map_single #map_canvas, #bg_map_single #map_canvas .iprelative #map-canvas, #bg_map_single #map_canvas .iprelative #map-canvas #loading_div").css({
 			"width": "100%",
 			"height": "160px"
 		});
-		$(".singlePlace #content .single_post_advt, .singlePlace #content .realated_post, #report_this, .company_info, .company_info2").hide();
+		$(".singlePlace #content .single_post_advt").hide();
+		$(".singlePlace #content .realated_post").hide();
   });
 </script>

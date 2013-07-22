@@ -563,12 +563,22 @@ function get_multicit_select_dl($dl_name,$dl_id='',$selected='',$extra='',$defau
 function get_multihood_dl_options($selected='',$default_option='',$att='', $city_id, $hood_id)
 {
 	global $wpdb, $multihood_db_table_name;
-	$hood_info = $wpdb->get_results("select hood_id,hoodname from $multihood_db_table_name where cities = $city_id  order by sortorder asc, is_default desc");
+	$hood_info = $wpdb->get_results("select hood_id,hoodname from $multihood_db_table_name where cities = $city_id hood_id IN( SELECT DISTINCT meta.meta_value FROM wp_postmeta meta INNER JOIN wp_term_relationships ON wp_term_relationships.object_id = meta.post_id INNER JOIN wp_posts post ON post.ID= meta.post_id AND post.post_type='place') order by sortorder asc, is_default desc");
+/*SELECT hood_id, hoodname 
+FROM `wp_multihood`
+WHERE cities = 1 AND `hood_id` IN(
+SELECT DISTINCT meta.`meta_value` FROM `wp_postmeta` meta 
+INNER JOIN wp_term_relationships ON wp_term_relationships.`object_id` = meta.post_id
+INNER JOIN `wp_posts` post ON post.`ID`= meta.`post_id` AND post.`post_type`='place'  
+)
+ORDER BY sortorder ASC, is_default DESC */
+
+	
 	$return_str = '';
-	//print_r($city_id);
-	//print_r($hood_info);
+	print_r($city_id);
+	print_r($hood_info);
 	if($hood_info)
-	{ 	$return_str .= '<option value="" >'.__('Select Neighbourhood').'</option>';
+	{ 	$return_str .= '<option value="" >'.__('Selecione').'</option>';
 
 		foreach($hood_info as $hood)
 		{ if($hood){
@@ -636,7 +646,7 @@ function get_city_location_menu(){
 <div>
 <span onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city='.$city->city_slug; ?>';"><?php echo $city->cityname; ?></span>
 <?php $hoods = $wpdb->get_results("select * from $multihood_db_table_name where $city->city_id in (cities)"); if($hoods){?>
-<span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span>
+<?php /*?><span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span><?php */?>
 <?php }?>
 </div>
 </li>
@@ -669,7 +679,7 @@ function get_region_city_location_menu($region_id){
 <div>
 <span onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city='.$city->city_slug; ?>';"><?php echo $city->cityname; ?></span>
 <?php $hoods = $wpdb->get_results("select * from $multihood_db_table_name where $city->city_id in (cities)"); if($hoods){?>
-<span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span>
+<?php /*?><span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span><?php */?>
 <?php }?>
 </div>
 </li>
@@ -730,7 +740,7 @@ function get_region_location_menu($country_id=''){
 <div>
 <span onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city='. $city->city_slug; ?>';"><?php echo  $city->cityname; ?></span>
 <?php $hoods = $wpdb->get_results("select * from $multihood_db_table_name where $city->city_id in (cities)"); if($hoods){?>
-<span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span>
+<?php /*?><span class="location_dig" onclick="dig_hoods(<?php echo $city->city_id; ?>)" >&nbsp;</span><?php */?>
 <?php }?></div></li>		<?php }
 	
 			
@@ -747,7 +757,7 @@ function dig_cities(region_id){
 jQuery("#location_select_list").load("<?php echo get_bloginfo('url').'/?ajax=dig_cities&region_id='; ?>"+region_id);
 }
 function dig_hoods(city_id){
-jQuery("#location_select_list").load("<?php echo get_bloginfo('url').'/?ajax=dig_hoods&city_id='; ?>"+city_id);
+//jQuery("#location_select_list").load("<?php echo get_bloginfo('url').'/?ajax=dig_hoods&city_id='; ?>"+city_id);
 }
 /* ]]> */
 </script>
@@ -756,19 +766,19 @@ jQuery("#location_select_list").load("<?php echo get_bloginfo('url').'/?ajax=dig
 <li id="get_everywhere" ><span onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city=0'; ?>';"><?php $everywhere = $wpdb->get_var("select cityname from $multicity_db_table_name where city_id=0"); if($everywhere){echo $everywhere;}  ?></span></li>
 <?php }?>
 <?php if(get_option('ptthemes_enable_multicountry_flag')){?>
-<li id="get_countrys" ><span><?php echo  __('All Countries'); ?></span></li>
+<li id="get_countrys" ><span><?php echo  __('Todos os Estados'); ?></span></li>
 <?php }?>
 <?php if(get_option('ptthemes_enable_multiregion_flag')){?>
-<li id="get_regions" ><span><?php echo  __('All Regions'); ?></span></li>
+<li id="get_regions" ><span><?php echo  __('Todas as Regiões'); ?></span></li>
 <?php }?>
 <?php if(get_option('ptthemes_enable_multicity_flag')){?>
-<li id="get_cities" ><span><?php echo  __('All Cities'); ?></span></li>
+<li id="get_cities" ><span><?php echo  __('Todas as Cidades'); ?></span></li>
 <?php }?>
 <?php if(get_option('ptthemes_enable_multihood_flag')=='disabled'){?>
-<li id="get_hoods" ><span><?php echo  __('All Neighbourhood'); ?></span></li>
+<li id="get_hoods" ><span><?php echo  __('Todos os Bairros'); ?></span></li>
 <?php }?>
 <?php if(!get_option('user_near_search')==0){?>
-<li id="locate_me" onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city=findme'; ?>';"><span><?php echo  __('My Nearest City'); ?></span></li>
+<li id="locate_me" onclick="window.location.href = '<?php echo get_bloginfo('url').'/?multi_city=findme'; ?>';"><span><?php echo  __('Perto de mim'); ?></span></li>
 <?php }?>
 </ul>
 <ul id="location_select_list">

@@ -58,14 +58,18 @@ if($comment_add_flag)
 ?>
 <?php if ('open' == $post->comment_status && !$comment_add_flag) : ?>
 <div id="respond">
-    <h3><?php global $is_place_post,$is_event_post;
+    <h3>
+			<?php /*?><?php global $is_place_post,$is_event_post;
 
-	if($post->post_type=='events' || $post->post_type=='event')
-	{
-		$is_event_post=1;
-	}
-	if($is_place_post||$is_event_post){	echo COMMENTS_TITLE_PLACE;}else{echo COMMENTS_TITLE_BLOG;}	
-	?> </h3>
+				if($post->post_type=='events' || $post->post_type=='event')
+				{
+					$is_event_post=1;
+				}
+				if($is_place_post||$is_event_post){	echo COMMENTS_TITLE_PLACE;}else{echo COMMENTS_TITLE_BLOG;}	
+				?> <?php */
+			?>
+      Escrever opinião
+      </h3>
     <?php  if ( !$user_ID ){do_action( 'social_connect_form' );} ?>
     <div class="cancel-comment-reply">
 		<small><?php cancel_comment_reply_link(); ?></small>
@@ -83,19 +87,17 @@ if($comment_add_flag)
     <?php else : ?>	
         <form action="<?php echo site_url(); ?>/wp-comments-post.php" method="post" id="commentform">
          <?php global $is_place_post,$is_event_post,$current_user; if(($is_place_post||$is_event_post)&&get_option('ptthemes_disable_rating')=='' ){if($post->post_author == $current_user->data->ID && get_post_meta($post->ID,'claimed',true)==1){}else{ ?> 
-         <p class="commpadd"> <span class="replyhide"><?php echo RATING_MSG;?>  <br /> <span class="comments_rating"> <?php require_once (TEMPLATEPATH . '/library/rating/get_rating.php');?> </span> </span></p>
+         <p class="commpadd"> <span class="replyhide"><font style="float:left; margin-right:5px"><?php echo RATING_MSG;?></font> <span class="comments_rating"> <?php require_once (TEMPLATEPATH . '/library/rating/get_rating.php');?> </span> </span></p>
          
 		 <?php do_action('below_star_rating', $post->ID); ?>
 
 		<?php	}}?>
         
          <p class="commpadd clearfix">
-         <label for="comment"><small>
-         <?php global $is_place_post; if($is_place_post || $post->post_type=='event'){ echo REVIEW_TEXT;}else{echo COMMENT_TEXT;}?>
-		 </small></label>
+         <label for="comment"><?php global $is_place_post; if($is_place_post || $post->post_type=='event'){ echo REVIEW_TEXT;}else{echo COMMENT_TEXT;}?></label>
         <textarea name="comment" id="comment" rows="10" cols="10" tabindex="4"></textarea></p>
         <?php if ( $user_ID ) : ?>
-                <p><?php echo COMMENT_LOGGED_IN; ?> &rarr; <a href="<?php echo site_url(); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo home_url(); ?>/?ptype=login&action=logout" title="Log out of this account"><?php echo COMMENT_LOGOUT; ?> &raquo;</a></p>
+                <!--<p><?php echo COMMENT_LOGGED_IN; ?> &rarr; <a href="<?php echo site_url(); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo home_url(); ?>/?ptype=login&action=logout" title="Log out of this account"><?php echo COMMENT_LOGOUT; ?> &raquo;</a></p>-->
              <?php else : ?>
             <div id="comment-user-details">
 <?php do_action('alt_comment_login'); ?>
@@ -116,7 +118,7 @@ if($comment_add_flag)
          <div class="aleft" ><input name="submit" type="submit" id="submit" tabindex="5" value="<?php global $is_place_post; if($is_place_post || $post->post_type=='event'){echo REVIEW_SUBMIT_BTN;}else{echo COMMENT_ADD_COMMENT;}?>" onclick="return comment_validate();" />
 		    <?php comment_id_fields(); ?>
 		</div>
-        
+        <hr style="float:left; width:492px; border-top:1px dotted #aaaaaa; height:1px" />
 		<?php do_action('comment_form', $post->ID); ?>
         </form>
     <?php endif; // If logged in ?>

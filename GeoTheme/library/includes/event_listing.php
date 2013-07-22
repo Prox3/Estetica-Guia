@@ -15,7 +15,7 @@ $current_term = $wp_query->get_queried_object();
             </div>
     
     <div class="clearfix"></div>
-    <div id="content" class="content_index clearfix c_list">
+    <div id="content" class="content_index clearfix">
   <div id="cat_top_desc">
    <?php 
   $term_desc = term_description( $current_term->term_id, 'event_tags' ) ;

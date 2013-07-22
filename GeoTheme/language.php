@@ -192,7 +192,7 @@ define('CHANGE_PW_TEXT',__('Change Password'));
 define('MY_ACCOUNT_TEXT',__('My Account'));
 
 //header.php
-define('WELCOME_TEXT',__('Welcome '));
+define('WELCOME_TEXT',__('Bem-vindo '));
 define('GUEST_TEXT',__('Guest'));
 define('LOGOUT_TEXT',__('Logout'));
 define('SIGN_IN_TEXT',__('Sign In'));
