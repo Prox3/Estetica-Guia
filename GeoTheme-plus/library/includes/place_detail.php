@@ -3,7 +3,11 @@
 <div id="wrapper" class="clearfix">
          	<div id="inner_pages" class="clearfix singlePlace" >
             	
-                		
+                <h1 class="main_title"><a href="<?php if($preview){echo '#';}else{the_permalink();} ?>" rel="bookmark" title="Permanent Link to <?php if($preview){echo $proprty_name;}else{the_title_attribute();} ?>">
+                      <?php if($preview){echo $proprty_name;}else{the_title();} ?>
+                      </a></h1>
+                      
+                      <div id="body_info_place"></div>
                          
                        <div class="likethis">
                      <?php if ( get_option('ptthemes_tweet_button') ) { ?>
@@ -32,37 +36,6 @@
 
   		<div id="content" class="content_inner" >
         <div class="single_post">
-        
-        <div id='bg_map_single'></div>
-        <h1 class="main_title"><a href="<?php if($preview){echo '#';}else{the_permalink();} ?>" rel="bookmark" title="Permanent Link to <?php if($preview){echo $proprty_name;}else{the_title_attribute();} ?>">
-                      <?php if($preview){echo $proprty_name;}else{the_title();} ?>
-                      </a></h1>
-                      <div id="placeAddress"></div>
-                      <div id="body_info_place"></div>
-                      <hr id="hr_single" />
-                      
-                      <div id="body_additional_place">
-                      	<div class="info_addtional_place">
-                        	<span class="title_additional">Preço por pessoa:</span>
-                          <span class="text_additional">$$ (De R$26 até R$50)</span>
-                        </div>
-                        <div class="info_addtional_place">
-                        	<span class="title_additional">Categoria:</span>
-                          <span class="text_additional">Studio de Dança</span>
-                        </div>
-                        <div class="info_addtional_place">
-                        	<span class="title_additional">Formas de pagamento:</span>
-                          <span class="text_additional">Crédito, Débito, Outras formas</span>
-                        </div>
-                        <div class="info_addtional_place">
-                        	<span class="title_additional">Horário de Funcionamento:</span>
-                          <span class="text_additional">Qua. a Sab.: 12h às 15:30 e 19h às 23:30 Dom.: 12h às 18h</span>
-                        </div>
-                      </div>
-                      
-                      <div id="full_banner"> Full Banner 468x60</div>
-        
-        
       <?php if(have_posts() || $preview) : 
 	   if($preview && !$_REQUEST['alook'] && $_SESSION['property_info']['price_select']){$pkg_limit = get_property_price_info_listing('',$_SESSION['property_info']['price_select']);}
 	   elseif(($preview && $_REQUEST['alook'] )||($preview && !$_SESSION['property_info']['price_select']) ){$pkg_limit = get_property_price_info_listing($_REQUEST['pid']);}
@@ -177,13 +150,11 @@
               </div> <!-- post #end -->
               
                
-<!--<div class="pos_navigation clearfix">
+<div class="pos_navigation clearfix">
     <div class="post_left fl"><?php GT_previous_post_link('%link',''.__('Previous'), true) ?></div>
     <div class="post_right fr"><?php GT_next_post_link('%link',__('Next').'', true) ?></div>
-</div>-->
-              </div> 
-              	<div class="body_comments_detail"><?php dynamic_sidebar(28);  ?></div>
-              <!-- single post content #end -->
+</div>
+              </div> <!-- single post content #end -->
               <div class="single_post_advt"><?php dynamic_sidebar(7);  ?> </div>
             		<?php if(get_option('ptthemes_related_on_detailpage')!='No'){ get_related_posts($post);} ?>
 
@@ -204,9 +175,6 @@ jQuery('#report_this_ajax').slideToggle("200");
 <?php }?>
   </div> <!-- content #end -->
       <div id="sidebar">
-      	<div id="body_opiniao">
-        	<a></a>
-        </div>
       <div class="company_info">
      <?php  
 ############################################# Fix for "Edit this Post" link taking user to backend ########################################	 

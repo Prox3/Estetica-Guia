@@ -36,7 +36,7 @@ $category_link = get_term_link($current_term, 'placecategory');
             </div>
     
     <div class="clearfix"></div>
-    <div id="content" class="content_index clearfix">
+    <div id="content" class="content_index clearfix c_list">
    <div id="cat_top_desc">
   <?php 
  $term_desc = term_description( $current_term->term_id, 'place_tags' ) ;

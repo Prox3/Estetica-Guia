@@ -169,8 +169,8 @@ function ecu_upload_form($title, $msg, $check=true) {
     <!-- Easy Comment Uploads for Wordpress by Tom Wright: http://wordpress.org/extend/plugins/easy-comment-uploads/ -->
 
     <div id='ecu_uploadform'>
-    <h3 class='title'>Fazer upload de imagem</h3>
-    <div class='message'><span>Escolha uma imagem para incluir na sua avaliação:</span></div>
+    <h3 class='title'>$title</h3>
+    <div class='message'>$msg</div>
     ";
 
     ecu_upload_form_iframe();

@@ -323,27 +323,6 @@ jQuery("#rmenu").click(function() {
 		$("#pg-search .category_list_view li .content .address").next().addClass("divAddress");
 		$("#pg-search .category_list_view li .content").find("p:eq(2)").addClass("descListPlace");
 		
-		var html_address = $(".singlePlace #sidebar .company_info p:eq(2)").next().clone();
-		$("#placeAddress").append(html_address);
-		
-		var html_phone = $(".i_contact").parent().clone();
-		$("#body_info_place").append(html_phone);
-		$("#body_info_place p:eq(0)").attr("id", "info_phone");
-		
-		var html_site = $(".i_website").clone();
-		$("#body_info_place").append(html_site);
-		
-		var html_share = $(".company_info2 .share").clone();
-		$("#body_info_place").append(html_share);
-		
-		$("#location_select_wrapper ul").first().find("li").attr("style","border:0px !important");
-		
-		var html_map = $(".singlePlace #content .single_post_advt #sticky_map .map_background .top_banner_section_in #map_canvas").clone();
-		$("#bg_map_single").append(html_map);
-		$("#bg_map_single #map_canvas, #bg_map_single #map_canvas .iprelative #map-canvas, #bg_map_single #map_canvas .iprelative #map-canvas #loading_div").css({
-			"width": "100%",
-			"height": "160px"
-		});
-		$(".singlePlace #content .single_post_advt, .singlePlace #content .realated_post, #report_this, .company_info, .company_info2").hide();
+		$(".singlePlace").prepend("<div id='bg_map_single'></div>");
   });
 </script>

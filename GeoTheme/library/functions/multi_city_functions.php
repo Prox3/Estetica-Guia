@@ -563,20 +563,10 @@ function get_multicit_select_dl($dl_name,$dl_id='',$selected='',$extra='',$defau
 function get_multihood_dl_options($selected='',$default_option='',$att='', $city_id, $hood_id)
 {
 	global $wpdb, $multihood_db_table_name;
-	$hood_info = $wpdb->get_results("select hood_id,hoodname from $multihood_db_table_name where cities = $city_id hood_id IN( SELECT DISTINCT meta.meta_value FROM wp_postmeta meta INNER JOIN wp_term_relationships ON wp_term_relationships.object_id = meta.post_id INNER JOIN wp_posts post ON post.ID= meta.post_id AND post.post_type='place') order by sortorder asc, is_default desc");
-/*SELECT hood_id, hoodname 
-FROM `wp_multihood`
-WHERE cities = 1 AND `hood_id` IN(
-SELECT DISTINCT meta.`meta_value` FROM `wp_postmeta` meta 
-INNER JOIN wp_term_relationships ON wp_term_relationships.`object_id` = meta.post_id
-INNER JOIN `wp_posts` post ON post.`ID`= meta.`post_id` AND post.`post_type`='place'  
-)
-ORDER BY sortorder ASC, is_default DESC */
-
-	
+	$hood_info = $wpdb->get_results("select hood_id,hoodname from $multihood_db_table_name where cities = $city_id  order by sortorder asc, is_default desc");
 	$return_str = '';
-	print_r($city_id);
-	print_r($hood_info);
+	//print_r($city_id);
+	//print_r($hood_info);
 	if($hood_info)
 	{ 	$return_str .= '<option value="" >'.__('Selecione').'</option>';
 

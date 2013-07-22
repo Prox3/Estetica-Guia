@@ -238,7 +238,7 @@ get_header(); ?>
         
     <?php } ?></div>
     <div class="clearfix"></div>
-        <div id="content" class="content_r clearfix">			 
+        <div id="content" class="content_r clearfix c_list">			 
 <?php if(have_posts()) : ?>
     <?php while(have_posts()) : the_post() ?>
             <?php $pagedesc = get_post_meta($post->ID, 'pagedesc', $single = true); ?>

@@ -1,3 +1,4 @@
+<input type="hidden" id="define_type_page" value="archive" />
 <?php
 global $wp_query, $post;
 $child_dir =  get_stylesheet_directory();
